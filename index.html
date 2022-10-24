@@ -1,1 +1,98 @@
-hello!
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Andrew Dawes, Software Engineer</title>
+		<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+		<style>
+			h1 {
+				margin-bottom: 0;
+			}
+			h3 {
+				margin-bottom: 0.25rem
+			}
+			section {
+				margin: 1rem
+			}
+			ul.splitlist {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+			}
+			.footer {
+				opacity: 0.5;
+				font-size: 0.75em
+			}
+			@media only screen and (min-width: 600px) {
+				ul.splitlist {
+					flex-direction: row;
+				}
+				ul.splitlist li {
+					width: 50%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main class="container">
+			<div class="headings">
+				<h1>Andrew Dawes</h1>
+				<h2>Software Engineer and Documentation Enthusiast</h2>
+			</div>
+			<hr>
+			<section>
+				<div class="grid">
+					<div>
+						<h3>My Interests 🫶</h3>
+						<p>Here are just a few of my many varied interests</p>
+						<ul>
+							<li>Aviation</li>
+							<li>Formula One</li>
+							<li>Photography</li>
+							<li>Language Learning</li>
+							<li>Notaphily</li>
+							<li>Software Development</li>
+							<li>Whisky</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Languages 💬</h3>
+						<p>I can already speak these</p>
+						<ul>
+							<li>🇬🇧 English (native)</li>
+							<li>🇩🇪 German (B2)</li>
+						</ul>
+						<p>I have started learning these</p>
+						<ul>
+							<li>🇪🇸 Spanish</li>
+							<li>🇯🇵 Japanese</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<hr>
+			<section>
+				<h3>Open Source 📖</h3>
+				<p>I've made <strong>16</strong> commits, changing <strong>138</strong> files in <strong>13</strong> projects</p>
+				<ul class="splitlist">
+					<li><a href="https://github.com/Automattic/jetpack" target="_blank">Automattic/jetpack</a></li>
+					<li><a href="https://github.com/bolt/core" target="_blank">bolt/core</a></li>
+					<li><a href="https://github.com/cakephp/docs" target="_blank">cakephp/docs</a></li>
+					<li><a href="https://github.com/chartjs/Chart.js" target="_blank">chartjs/Chart.js</a></li>
+					<li><a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank">codeigniter4/CodeIgniter4</a></li>
+					<li><a href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank">freeCodeCamp/freeCodeCamp</a></li>
+					<li><a href="https://github.com/KnpLabs/php-github-api" target="_blank">KnpLabs/php-github-api</a></li>
+					<li><a href="https://github.com/laravel/docs" target="_blank">laravel/docs</a></li>
+					<li><a href="https://github.com/nette/docs" target="_blank">nette/docs</a></li>
+					<li><a href="https://github.com/qunitjs/qunit" target="_blank">qunitjs/qunit</a></li>
+					<li><a href="https://github.com/smarty-php/smarty" target="_blank">smarty-php/smarty</a></li>
+					<li><a href="https://github.com/yiisoft/yii2" target="_blank">yiisoft/yii2</a></li>
+				</ul>
+			</section>
+			<hr>
+			<p class="footer">andrewdaw.es</p>
+		</main>
+	</body>
+</html>
