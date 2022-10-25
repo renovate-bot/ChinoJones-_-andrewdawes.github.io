@@ -1,0 +1,47 @@
+h1 {
+	margin-bottom: 0;
+}
+h3 {
+	margin-bottom: 0.25rem
+}
+section {
+	margin: 1rem
+}
+ul.splitlist {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.footer {
+	opacity: 0.5;
+	font-size: 0.75em
+}
+.emoji {
+	height: 35px;
+	width: 45px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: 45px;
+	position: relative;
+	top: 2px;
+}
+.locale-area {
+	align-items: flex-end;
+	justify-content: flex-end;
+	display: flex;
+	gap: 5px;
+}
+.flag-opacity {
+	opacity: 0.65
+}
+.flag-opacity:hover {
+	opacity: 1
+}
+@media only screen and (min-width: 600px) {
+	ul.splitlist {
+		flex-direction: row;
+	}
+	ul.splitlist li {
+		width: 50%;
+	}
+}
