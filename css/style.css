@@ -37,6 +37,15 @@ ul.splitlist {
 .flag-opacity:hover {
 	opacity: 1
 }
+.credits {
+	opacity: 0.6
+}
+.credits h6 {
+	margin-bottom: 0.25rem
+}
+.credits ul {
+	font-size: 0.75rem;
+}
 @media only screen and (min-width: 600px) {
 	ul.splitlist {
 		flex-direction: row;
