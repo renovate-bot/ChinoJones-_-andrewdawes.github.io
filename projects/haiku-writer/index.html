@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.6/css/pico.min.css" integrity="sha256-EJjb/lvpbMOOLhPpD9qGYwKRyF0rzRj1z15VsN8x6R8=" crossorigin="anonymous">
+		<title>HaikuWriter</title>
+		<style>h1{margin-bottom: 1rem} h5{margin-bottom: 0;} .credits{opacity: 0.65}</style>
+	</head>
+	<body>
+
+		<main class="container">
+			<h1>HaikuWriter</h1>
+			<input type="text" id="lineOne" data-line="1">
+			<input type="text" id="lineTwo" data-line="2">
+			<input type="text" id="lineThree" data-line="3">
+			<hr>
+			<div class="credits">
+				<h5>Credits</h4>
+				<p>I used <a href="https://github.com/words/syllable" target="blank">syllable</a> to count the syllables and <a href="https://github.com/picocss/pico">Pico.css</a> to make the UI pretty!</p>
+			</div>
+		</main>
+
+		<script type="module">
+			import {syllable} from 'https://esm.sh/syllable@5?bundle'
+
+			function updateDom(el, invalid) {
+				el.setAttribute('aria-invalid', invalid);
+			}
+
+			function isSyllableCountValid(syllableCount, lineNumber) {
+				if(lineNumber === '2') {
+					return syllableCount === 7;
+				}
+				return syllableCount === 5;
+			}
+
+			function checkSyllables(e) {
+				let el = e.target;
+				let lineValue = el.value;
+				let lineNumber = el.dataset.line;
+				let syllableCount = syllable(lineValue);
+				let invalid = !isSyllableCountValid(syllableCount, lineNumber);
+				updateDom(el, invalid);
+			}
+
+			[
+				document.getElementById('lineOne'),
+				document.getElementById('lineTwo'),
+				document.getElementById('lineThree')
+			].forEach(el => el.addEventListener('keyup', checkSyllables));
+		</script>
+
+	</body>
+</html>
