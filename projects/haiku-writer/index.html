@@ -22,26 +22,20 @@
 		</main>
 
 		<script type="module">
-			import {syllable} from 'https://esm.sh/syllable@5?bundle'
+			import { syllable } from 'https://esm.sh/syllable@5?bundle';
 
-			function updateDom(el, invalid) {
-				el.setAttribute('aria-invalid', invalid);
+			const updateDom = (el, invalid) => el.setAttribute('aria-invalid', invalid);
+
+			const isSyllableCountValid = (syllableCount, lineNumber) => {
+				let target = lineNumber === 2 ? 7 : 5;
+				return syllableCount === target;
 			}
 
-			function isSyllableCountValid(syllableCount, lineNumber) {
-				if(lineNumber === '2') {
-					return syllableCount === 7;
-				}
-				return syllableCount === 5;
-			}
-
-			function checkSyllables(e) {
-				let el = e.target;
-				let lineValue = el.value;
-				let lineNumber = el.dataset.line;
-				let syllableCount = syllable(lineValue);
+			const checkSyllables =({ target }) => {
+				let lineNumber = parseInt(target.dataset.line);
+				let syllableCount = syllable(target.value);
 				let invalid = !isSyllableCountValid(syllableCount, lineNumber);
-				updateDom(el, invalid);
+				updateDom(target, invalid);
 			}
 
 			[
@@ -50,6 +44,5 @@
 				document.getElementById('lineThree')
 			].forEach(el => el.addEventListener('keyup', checkSyllables));
 		</script>
-
 	</body>
 </html>
