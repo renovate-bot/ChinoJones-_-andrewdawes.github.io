@@ -31,7 +31,7 @@
 				return syllableCount === target;
 			}
 
-			const checkSyllables =({ target }) => {
+			const checkSyllables = ({ target }) => {
 				let lineNumber = parseInt(target.dataset.line);
 				let syllableCount = syllable(target.value);
 				let invalid = !isSyllableCountValid(syllableCount, lineNumber);
