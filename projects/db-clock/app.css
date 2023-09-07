@@ -1,7 +1,7 @@
 .clock {
   height: 575px;
   width: 575px;
-  background: #FFF;
+  background: #fff;
   border-radius: 50%;
   position: relative;
   border: 10px solid #1a2052;
@@ -381,6 +381,19 @@
 }
 .second-markers > div:nth-child(60) {
   transform: rotate(360deg);
+}
+
+.notes {
+  margin: 10px;
+  font-family: sans-serif;
+}
+.notes h1 {
+  font-size: 26px;
+  margin: 60px 0 0 0;
+}
+.notes ul {
+  margin-top: 10px;
+  padding-left: 30px;
 }
 
 /*# sourceMappingURL=app.css.map */
